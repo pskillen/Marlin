@@ -429,20 +429,30 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN -1
-#define E1_AUTO_FAN_PIN -1
+#define E0_AUTO_FAN_PIN 6 // D4 servo pin
+#define E1_AUTO_FAN_PIN 5 // D5 servo pin
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
 #define E4_AUTO_FAN_PIN -1
 #define E5_AUTO_FAN_PIN -1
 #define E6_AUTO_FAN_PIN -1
 #define E7_AUTO_FAN_PIN -1
-#define CHAMBER_AUTO_FAN_PIN -1
+#define CHAMBER_AUTO_FAN_PIN 4 // D6 servo pin
 
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 #define CHAMBER_AUTO_FAN_TEMPERATURE 30
 #define CHAMBER_AUTO_FAN_SPEED 255
+
+// Override + disable servos
+#define SERVO0_PIN -1
+#define SERVO1_PIN -1
+#define SERVO2_PIN -1
+#define SERVO3_PIN -1
+
+#define TEMP_0_PIN       13   // Analog Input
+#define TEMP_1_PIN       14   // Analog Input
+#define TEMP_BED_PIN     15   // Analog Input
 
 /**
  * Part-Cooling Fan Multiplexer
