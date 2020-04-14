@@ -483,15 +483,11 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // CTC dual attempt 1
-  // #define DEFAULT_Kp 22.2
-  // #define DEFAULT_Ki 1.08
-  // #define DEFAULT_Kd 150
-
-  // CTC dual autotune
-  #define DEFAULT_Kp 14.57
-  #define DEFAULT_Ki 0.70
-  #define DEFAULT_Kd 75.50
+  // CTC dual manually tuned after autotune 2020-04-14
+  #define DEFAULT_Kp  18.02
+  #define DEFAULT_Ki   0.92  // Increase by fractional amounts!
+  #define DEFAULT_Kd  88.18
+  // M301 P18.02 I0.92 D88.18
 
 #endif // PIDTEMP
 
