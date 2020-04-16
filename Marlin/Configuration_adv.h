@@ -429,23 +429,23 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN         6 // D6 servo pin
-#define E1_AUTO_FAN_PIN         5 // D5 servo pin
+#define E0_AUTO_FAN_PIN         42
+#define E1_AUTO_FAN_PIN         40
 #define E2_AUTO_FAN_PIN         -1
 #define E3_AUTO_FAN_PIN         -1
 #define E4_AUTO_FAN_PIN         -1
 #define E5_AUTO_FAN_PIN         -1
 #define E6_AUTO_FAN_PIN         -1
 #define E7_AUTO_FAN_PIN         -1
-#define CHAMBER_AUTO_FAN_PIN     4 // D4 servo pin
+#define CHAMBER_AUTO_FAN_PIN     65
 
-#define EXTRUDER_AUTO_FAN_TEMPERATURE 50
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 60
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 #define CHAMBER_AUTO_FAN_TEMPERATURE 30
 #define CHAMBER_AUTO_FAN_SPEED 255
 
-// Override + disable servos
-#define SERVO0_PIN -1
+// Override / disable servos
+#define SERVO0_PIN 11 // BL touch pin
 #define SERVO1_PIN -1
 #define SERVO2_PIN -1
 #define SERVO3_PIN -1
@@ -1587,10 +1587,10 @@
  * the probe to be unable to reach any points.
  */
 #if PROBE_SELECTED && !IS_KINEMATIC
-  //#define MIN_PROBE_EDGE_LEFT MIN_PROBE_EDGE
-  //#define MIN_PROBE_EDGE_RIGHT MIN_PROBE_EDGE
-  //#define MIN_PROBE_EDGE_FRONT MIN_PROBE_EDGE
-  //#define MIN_PROBE_EDGE_BACK MIN_PROBE_EDGE
+  #define MIN_PROBE_EDGE_LEFT MIN_PROBE_EDGE
+  #define MIN_PROBE_EDGE_RIGHT MIN_PROBE_EDGE
+  #define MIN_PROBE_EDGE_FRONT MIN_PROBE_EDGE
+  #define MIN_PROBE_EDGE_BACK MIN_PROBE_EDGE
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
